@@ -1,38 +1,231 @@
 <!DOCTYPE html>
-<html lang="id">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Klinik AR–Ridlo</title>
-    <link rel="stylesheet" href="style/fatir.css" />
-    <link rel="stylesheet" href="style/jaki.css" />
-    <link rel="stylesheet" href="style/bayu.css" />
-    <link rel="stylesheet" href="style/daniel.css" />
-  </head>
-  <body>
-    <!-- Section 1: Fatir -->
-    <section id="hero">
-      <!-- isi: judul klinik, deskripsi singkat, gambar hero -->
-    </section>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style/style.css" />
+  <title>Klinik Ar-Ridlo</title>
+</head>
+<body>
+  <!-- ====== HEADER / NAV ====== -->
+  <header id="header" class="header">
+    <div class="container header__bar">
+      <a href="#" class="header__brand">
+        <span class="header__logo-dots" aria-hidden="true"></span>
+        <span class="header__title">Klinik AR–RIDLO</span>
+      </a>
 
-    <!-- Section 2: Jaki -->
-    <section id="stats">
-      <!-- isi: jumlah terapis, pasien, dokter -->
-    </section>
+      <nav class="header__nav" aria-label="Main">
+        <ul class="header__menu">
+          <li><a class="header__link is-active" href="#">Home</a></li>
+          <li><a class="header__link" href="#about">About</a></li>
+          <li class="header__dropdown">
+            <button class="header__link header__btn" aria-expanded="false">
+              Service <span class="caret">▾</span>
+            </button>
+            <!-- (opsional) dropdown list -->
+            <ul class="header__submenu">
+              <li><a href="#">Konsultasi</a></li>
+              <li><a href="#">Fisioterapi</a></li>
+              <li><a href="#">Laboratorium</a></li>
+            </ul>
+          </li>
+          <li><a class="header__link" href="#team">Doctor</a></li>
+          <li><a class="chip" href="#">Article</a></li>
+          <li><a class="cta" href="#contact">Contact</a></li>
+        </ul>
+        <button class="header__toggle" aria-label="Toggle menu">☰</button>
+      </nav>
+    </div>
+  </header>
 
-    <!-- Section 3: Jaki -->
-    <section id="about">
-      <!-- isi: deskripsi klinik, visi, gambar -->
-    </section>
+  <!-- ====== SECTION 1: HERO + STAT ====== -->
+  <section id="hero" class="hero">
+    <div class="hero__inner container">
+      <div class="hero__copy">
+        <h1 class="hero__title">
+          Klinik AR–Ridlo<br>Pengobatan Alternatif
+        </h1>
+        <p class="hero__desc">
+          Menyediakan pelayanan kesehatan terpercaya dengan tenaga medis profesional.
+        </p>
 
-    <!-- Section 4: Bayu -->
-    <section id="team">
-      <!-- isi: daftar dokter & terapis -->
-    </section>
+        <div class="hero__actions">
+          <a href="#" class="btn btn--primary">Buat Janji Sekarang →</a>
+          <a href="#" class="btn btn--ghost">More</a>
+        </div>
+      </div>
 
-    <!-- Section 5: Daniel -->
-    <footer id="footer">
-      <!-- isi: kontak, sosmed, newsletter -->
-    </footer>
-  </body>
+      <div class="hero__media">
+        <div class="hero__placeholder" aria-label="illustration"></div>
+      </div>
+    </div>
+
+    <!-- Statistik Singkat -->
+    <div class="hero__stats container">
+      <h3 class="hero__stats-title">Statistik Singkat</h3>
+      <div class="hero__stats-grid">
+        <div class="hero__stat-card">
+          <div class="icon"></div>
+          <div class="value">3</div>
+          <div class="label">Terapis</div>
+        </div>
+
+        <div class="hero__stat-card">
+          <div class="icon"></div>
+          <div class="value">32</div>
+          <div class="label">Antrean Sekarang</div>
+        </div>
+
+        <div class="hero__stat-card">
+          <div class="icon"></div>
+          <div class="value">32</div>
+          <div class="label">Dokter</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== SECTION 2: ABOUT ====== -->
+  <section id="about" class="about">
+    <div class="container">
+      <h2 class="about__title">Tentang Klinik Ar–Ridlo</h2>
+      <p class="about__lead">
+        Kami berdiri sejak tahun 2010 untuk memberikan pelayanan kesehatan yang aman, nyaman, dan profesional. 
+        Dengan dukungan dokter spesialis dan fasilitas modern, kami berkomitmen menjaga kesehatan Anda dan keluarga.
+      </p>
+      <div class="about__media" aria-label="photo placeholder"></div>
+    </div>
+  </section>
+
+  <!-- ====== SECTION 3: TEAM ====== -->
+  <section id="team" class="team">
+    <div class="container">
+      <h2 class="team__title">Tim Dokter &amp; Terapis Kami</h2>
+
+      <p class="team__subhead">Daftar dokter yang tersedia saat ini</p>
+      <div class="team__grid">
+        <!-- Doctor card -->
+        <article class="team-card">
+          <div class="team-card__thumb"></div>
+          <h3 class="team-card__name">dr. Andi Pratama, Sp.PD</h3>
+          <p class="team-card__role">Spesialis Penyakit Dalam</p>
+          <p class="team-card__meta"><strong>Jadwal</strong><br>Senin–Jumat, 09.00–15.00 WIB</p>
+          <p class="team-card__status"><span class="dot"></span> Tersedia Sekarang</p>
+        </article>
+
+        <article class="team-card">
+          <div class="team-card__thumb"></div>
+          <h3 class="team-card__name">dr. Andi Pratama, Sp.PD</h3>
+          <p class="team-card__role">Spesialis Penyakit Dalam</p>
+          <p class="team-card__meta"><strong>Jadwal</strong><br>Senin–Jumat, 09.00–15.00 WIB</p>
+          <p class="team-card__status"><span class="dot"></span> Tersedia Sekarang</p>
+        </article>
+
+        <article class="team-card">
+          <div class="team-card__thumb"></div>
+          <h3 class="team-card__name">dr. Andi Pratama, Sp.PD</h3>
+          <p class="team-card__role">Spesialis Penyakit Dalam</p>
+          <p class="team-card__meta"><strong>Jadwal</strong><br>Senin–Jumat, 09.00–15.00 WIB</p>
+          <p class="team-card__status"><span class="dot"></span> Tersedia Sekarang</p>
+        </article>
+      </div>
+
+      <p class="team__subhead">Daftar terapis yang tersedia saat ini</p>
+      <div class="team__grid">
+        <article class="team-card">
+          <div class="team-card__thumb"></div>
+          <h3 class="team-card__name">Andi Pratama</h3>
+          <p class="team-card__role">Terapis</p>
+          <p class="team-card__meta"><strong>Jadwal</strong><br>Senin–Jumat, 09.00–15.00 WIB</p>
+          <p class="team-card__status"><span class="dot"></span> Tersedia Sekarang</p>
+        </article>
+
+        <article class="team-card">
+          <div class="team-card__thumb"></div>
+          <h3 class="team-card__name">Andi Pratama</h3>
+          <p class="team-card__role">Terapis</p>
+          <p class="team-card__meta"><strong>Jadwal</strong><br>Senin–Jumat, 09.00–15.00 WIB</p>
+          <p class="team-card__status"><span class="dot"></span> Tersedia Sekarang</p>
+        </article>
+
+        <article class="team-card">
+          <div class="team-card__thumb"></div>
+          <h3 class="team-card__name">Andi Pratama</h3>
+          <p class="team-card__role">Terapis</p>
+          <p class="team-card__meta"><strong>Jadwal</strong><br>Senin–Jumat, 09.00–15.00 WIB</p>
+          <p class="team-card__status"><span class="dot"></span> Tersedia Sekarang</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== SECTION 4: FOOTER ====== -->
+  <footer id="site-footer" class="footer">
+    <div class="container footer__grid">
+      <div class="footer__col">
+        <h4>Product</h4>
+        <ul>
+          <li><a href="#">Features</a></li>
+          <li><a href="#">Pricing</a></li>
+          <li><a href="#">Case studies</a></li>
+          <li><a href="#">Reviews</a></li>
+          <li><a href="#">Updates</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact us</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h4>Support</h4>
+        <ul>
+          <li><a href="#">Getting started</a></li>
+          <li><a href="#">Help center</a></li>
+          <li><a href="#">Server status</a></li>
+          <li><a href="#">Report a bug</a></li>
+          <li><a href="#">Chat support</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h4>Downloads</h4>
+        <ul>
+          <li><a href="#">iOS</a></li>
+          <li><a href="#">Android</a></li>
+          <li><a href="#">Mac</a></li>
+          <li><a href="#">Windows</a></li>
+          <li><a href="#">Chrome</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer__bottom container">
+      <p class="newsletter-title">Subscribe to our newsletter</p>
+      <p class="newsletter-desc">Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
+      <p class="copyright">Copyright © 2025 Ar–Ridlo</p>
+
+      <div class="footer__social">
+        <a href="#" aria-label="Facebook" class="social"></a>
+        <a href="#" aria-label="Twitter" class="social"></a>
+        <a href="#" aria-label="Instagram" class="social"></a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+  const nav = document.querySelector('#header .header__nav');
+  const toggle = nav.querySelector('.header__toggle');
+  toggle.addEventListener('click', () => {
+    const open = toggle.getAttribute('aria-expanded') === 'true';
+    toggle.setAttribute('aria-expanded', String(!open));
+    nav.classList.toggle('open');
+  });
+</script>
+</body>
 </html>

@@ -1,0 +1,166 @@
+/* ====== Base (opsional, non-spesifik section) ====== */
+:root{
+  --primary:#2f8d45;        /* hijau tombol / heading */
+  --primary-dark:#0d3d1e;   /* hijau gelap (title besar) */
+  --mint:#cfe2dc;           /* background soft mint */
+  --chip:#eceff3;           /* kartu/placeholder terang */
+  --text:#1f2937;
+  --muted:#6b7280;
+  --radius-lg:24px;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:Inter,system-ui,Segoe UI,Arial,sans-serif;color:var(--text);line-height:1.6}
+.container{max-width:1120px;margin-inline:auto;padding:0 20px}
+h1,h2,h3{line-height:1.25;margin:0 0 .5rem}
+a{text-decoration:none;color:inherit}
+
+/* ====== HEADER ====== */
+#header{position:sticky;top:0;background:#fff;z-index:50;border-bottom:1px solid #eee}
+#header .header__bar{height:72px;display:flex;align-items:center;justify-content:space-between}
+
+/* Brand */
+#header .header__brand{display:flex;align-items:center;gap:10px;font-weight:800}
+#header .header__title{color:var(--primary)}
+#header .header__logo-dots{
+  width:24px;height:24px;display:inline-block;position:relative;
+}
+#header .header__logo-dots::before,
+#header .header__logo-dots::after{
+  content:"";position:absolute;inset:0;background:
+    radial-gradient(circle at 20% 20%, #8b8fa5 4px, transparent 5px),
+    radial-gradient(circle at 60% 20%, #8b8fa5 4px, transparent 5px),
+    radial-gradient(circle at 20% 60%, #8b8fa5 4px, transparent 5px),
+    radial-gradient(circle at 60% 60%, #8b8fa5 4px, transparent 5px);
+  opacity:.9;
+}
+
+/* Menu */
+#header .header__nav{display:flex;align-items:center}
+#header .header__menu{
+  display:flex;align-items:center;gap:24px;margin:0;padding:0;list-style:none;
+}
+#header .header__link{padding:10px 6px;border-radius:8px;color:#2b6b38;font-weight:600;opacity:.9}
+#header .header__link:hover{opacity:1}
+#header .header__link.is-active{color:var(--primary);text-decoration:underline 2px}
+
+/* Chip & CTA */
+#header .chip{
+  padding:8px 14px;border:1px solid #d1e3d7;border-radius:999px;color:#2b6b38;background:#fff;
+  font-weight:600;
+}
+#header .cta{
+  padding:10px 16px;border-radius:999px;background:var(--primary);color:#fff;font-weight:700;
+  box-shadow:0 1px 0 rgba(0,0,0,.08);
+}
+
+/* Dropdown (hover for desktop) */
+#header .header__dropdown{position:relative}
+#header .header__btn{background:none;border:none;cursor:pointer}
+#header .caret{font-size:.85em}
+#header .header__submenu{
+  position:absolute;top:46px;left:0;min-width:180px;background:#fff;border:1px solid #e5e7eb;
+  border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,.06);padding:8px;display:none;
+}
+#header .header__submenu li{list-style:none}
+#header .header__submenu a{display:block;padding:10px 12px;border-radius:8px;color:#374151}
+#header .header__submenu a:hover{background:#f3f4f6}
+#header .header__dropdown:hover .header__submenu{display:block}
+
+/* Mobile */
+#header .header__toggle{display:none;margin-left:12px;background:none;border:1px solid #e5e7eb;border-radius:8px;padding:6px 10px}
+@media (max-width: 960px){
+  #header .header__toggle{display:block}
+  #header .header__menu{display:none;position:absolute;top:72px;right:20px;left:20px;flex-direction:column;
+    background:#fff;border:1px solid #e5e7eb;border-radius:16px;padding:12px}
+  #header .header__nav.open .header__menu{display:flex}
+}
+/* Small helper JS-free toggle using :has where supported (progressive) */
+@supports(selector(:has(*))){
+  #header .header__nav:has(.header__toggle[aria-expanded="true"]) .header__menu{display:flex}
+}
+
+/* ====== SECTION 1: HERO + STAT ====== */
+#hero{padding:64px 0 96px}
+#hero .hero__inner{
+  display:grid;grid-template-columns:1.1fr 1fr;gap:48px;align-items:center;
+}
+#hero .hero__title{font-size:44px;color:var(--primary);font-weight:800}
+#hero .hero__desc{color:var(--muted);max-width:40ch;margin:12px 0 20px}
+#hero .hero__actions{display:flex;gap:12px;align-items:center}
+#hero .btn{padding:12px 18px;border-radius:999px;border:1px solid #d1d5db;display:inline-flex;align-items:center;gap:8px;font-weight:600}
+#hero .btn--primary{background:var(--primary);border-color:var(--primary);color:#fff}
+#hero .btn--ghost{background:#fff;color:#111}
+#hero .hero__placeholder{
+  background:var(--chip);border-radius:16px;height:280px;
+  box-shadow:inset 0 0 0 2px #e5e7eb;
+}
+#hero .hero__stats{
+  margin-top:64px;background:#e6e6e6;border-radius:36px;padding:36px 20px;
+}
+#hero .hero__stats-title{text-align:center;font-size:24px;font-weight:700;margin-bottom:20px}
+#hero .hero__stats-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:28px;align-items:stretch;max-width:760px;margin:0 auto;
+}
+#hero .hero__stat-card{
+  background:#f6f7fb;border-radius:16px;padding:22px;text-align:center;
+}
+#hero .hero__stat-card .icon{
+  width:56px;height:56px;margin:0 auto 12px;border-radius:12px;background:#e9ecf3;
+}
+#hero .hero__stat-card .value{font-size:28px;font-weight:800;color:var(--primary-dark);margin-bottom:4px}
+#hero .hero__stat-card .label{color:var(--muted);font-size:14px}
+
+/* ====== SECTION 2: ABOUT ====== */
+#about{background:var(--mint);padding:72px 0}
+#about .about__title{text-align:center;color:#fff;font-weight:700}
+#about .about__lead{max-width:700px;margin:8px auto 28px;text-align:center;color:#eef6f4}
+#about .about__media{
+  height:300px;max-width:520px;margin:0 auto;border-radius:20px;background:#f3f5fb;
+  box-shadow:inset 0 0 0 2px #e5e7eb;
+}
+
+/* ====== SECTION 3: TEAM ====== */
+#team{padding:80px 0}
+#team .team__title{font-size:40px;text-align:center;color:var(--primary-dark);font-weight:900;margin-bottom:28px}
+#team .team__subhead{font-weight:600;margin:28px 0 16px}
+#team .team__grid{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-bottom:28px;
+}
+#team .team-card{display:flex;flex-direction:column;gap:8px}
+#team .team-card__thumb{height:140px;border-radius:16px;background:#e9ecf3}
+#team .team-card__name{font-size:18px;font-weight:800;margin:4px 0}
+#team .team-card__role{color:var(--muted);margin:0}
+#team .team-card__meta{color:#374151;margin:6px 0 0}
+#team .team-card__status{color:#1b7a3f;font-weight:600;display:flex;align-items:center;gap:8px;margin:6px 0 0}
+#team .team-card__status .dot{width:10px;height:10px;border-radius:50%;background:#1b7a3f;display:inline-block}
+
+/* ====== SECTION 4: FOOTER ====== */
+#site-footer{background:var(--mint);padding:56px 0 36px;color:#0e2b1a}
+#site-footer .footer__grid{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:28px;margin-bottom:28px;
+}
+#site-footer h4{margin:0 0 12px;font-size:16px}
+#site-footer ul{list-style:none;margin:0;padding:0}
+#site-footer li{margin:8px 0}
+#site-footer a{color:#0e2b1a;opacity:.85}
+#site-footer a:hover{opacity:1}
+#site-footer .footer__bottom{text-align:center;border-top:1px solid rgba(0,0,0,.08);padding-top:20px}
+#site-footer .newsletter-title{font-weight:700;margin:8px 0 0}
+#site-footer .newsletter-desc{color:#234332;margin:6px 0 12px}
+#site-footer .copyright{margin:6px 0 14px}
+#site-footer .footer__social{display:flex;justify-content:center;gap:12px}
+#site-footer .social{width:36px;height:36px;border-radius:8px;background:#0f3d20;display:inline-block}
+
+/* ====== Responsive ====== */
+@media (max-width: 960px){
+  #hero .hero__inner{grid-template-columns:1fr}
+  #hero .hero__media{order:-1}
+  #hero .hero__title{font-size:36px}
+  #hero .hero__stats-grid{grid-template-columns:1fr;max-width:420px}
+  #team .team__grid{grid-template-columns:1fr 1fr}
+  #site-footer .footer__grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width: 560px){
+  #team .team__grid{grid-template-columns:1fr}
+  #site-footer .footer__grid{grid-template-columns:1fr}
+}
