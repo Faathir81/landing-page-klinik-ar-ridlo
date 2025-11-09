@@ -19,6 +19,11 @@
         </a>
 
         <nav class="header__nav" aria-label="Navigasi utama">
+          <button class="header__toggle" aria-expanded="false" aria-label="Buka navigasi utama">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
           <ul class="header__menu">
             <li><a class="header__link is-active" href="#hero">Beranda</a></li>
             <li><a class="header__link" href="#services">Layanan</a></li>
@@ -27,16 +32,16 @@
             <li><a class="header__link" href="#contact">Kontak</a></li>
             <li><a class="header__cta" href="#contact">Reservasi</a></li>
           </ul>
-          <button class="header__toggle" aria-expanded="false" aria-label="Buka tutup menu">☰</button>
         </nav>
       </div>
+      <div class="header__overlay" aria-hidden="true"></div>
     </header>
 
     <main>
       <!-- ====== HERO ====== -->
       <section id="hero" class="hero">
         <div class="hero__inner container">
-          <div class="hero__copy">
+          <div class="hero__copy" data-reveal>
             <p class="eyebrow">Klinik Pengobatan Alternatif & Terapi Manual</p>
             <h1>Mendampingi penyembuhan tubuh Anda secara menyeluruh.</h1>
             <p class="hero__desc">Pelayanan kesehatan keluarga dengan pendekatan personal, tenaga medis tersertifikasi, serta fasilitas modern untuk terapi, konsultasi, dan pemulihan.</p>
@@ -58,8 +63,8 @@
             </p>
           </div>
 
-          <div class="hero__media">
-            <img src="img/clinic.jpg" alt="Interior Klinik Ar-Ridlo" class="hero__image" />
+          <div class="hero__media" data-reveal="fade-left">
+            <img src="img/clinic.jpg" alt="Interior Klinik Ar-Ridlo" class="hero__image" fetchpriority="high" decoding="async" />
             <div class="hero__floating-card" aria-live="polite">
               <p class="hero__floating-title">Slot Konsultasi Hari Ini</p>
               <div class="hero__floating-value">
@@ -72,25 +77,25 @@
         </div>
 
         <div class="hero__stats container">
-          <div class="hero__stat-card">
+          <div class="hero__stat-card" data-reveal="scale">
             <div class="hero__stat-icon" aria-hidden="true">👩‍⚕️</div>
             <p class="value" data-target="3">0</p>
             <p class="label">Dokter Spesialis</p>
           </div>
 
-          <div class="hero__stat-card">
+          <div class="hero__stat-card" data-reveal="scale">
             <div class="hero__stat-icon" aria-hidden="true">🏥</div>
             <p class="value" data-target="6">0</p>
             <p class="label">Ruang Terapi Aktif</p>
           </div>
 
-          <div class="hero__stat-card">
+          <div class="hero__stat-card" data-reveal="scale">
             <div class="hero__stat-icon" aria-hidden="true">😊</div>
             <p class="value" data-target="480">0</p>
             <p class="label">Pasien Pulih</p>
           </div>
 
-          <div class="hero__stat-card">
+          <div class="hero__stat-card" data-reveal="scale">
             <div class="hero__stat-icon" aria-hidden="true">⭐</div>
             <p class="value" data-target="4.9">0</p>
             <p class="label">Rating Kepuasan</p>
@@ -101,14 +106,14 @@
       <!-- ====== SERVICES ====== -->
       <section id="services" class="services">
         <div class="container">
-          <div class="section-heading">
+          <div class="section-heading" data-reveal>
             <p class="eyebrow">Layanan Terpadu</p>
             <h2>Perawatan yang menyatu dengan kebutuhan Anda</h2>
             <p>Kami menggabungkan terapi tradisional dan medis modern untuk hasil optimal.</p>
           </div>
 
           <div class="services__grid">
-            <article class="service-card">
+            <article class="service-card" data-reveal>
               <div class="service-card__icon">💬</div>
               <h3>Konsultasi Dokter</h3>
               <p>Assessment menyeluruh dengan dokter spesialis saraf dan tulang belakang.</p>
@@ -119,7 +124,7 @@
               </ul>
             </article>
 
-            <article class="service-card">
+            <article class="service-card" data-reveal>
               <div class="service-card__icon">👐</div>
               <h3>Terapi Manual</h3>
               <p>Perbaikan otot dan sendi melalui manipulasi lembut oleh terapis bersertifikat.</p>
@@ -130,7 +135,7 @@
               </ul>
             </article>
 
-            <article class="service-card">
+            <article class="service-card" data-reveal>
               <div class="service-card__icon">🧪</div>
               <h3>Laboratorium Herbal</h3>
               <p>Racikan obat alami yang telah diuji keamanan dan efektivitasnya.</p>
@@ -141,7 +146,7 @@
               </ul>
             </article>
 
-            <article class="service-card">
+            <article class="service-card" data-reveal>
               <div class="service-card__icon">📱</div>
               <h3>Pantauan Digital</h3>
               <p>Telemedicine dan reminder terapi agar perawatan tetap konsisten.</p>
@@ -158,15 +163,15 @@
       <!-- ====== ABOUT ====== -->
       <section id="about" class="about">
         <div class="container about__grid">
-          <div class="about__media">
-            <img src="img/obat.jpg" alt="Terapi dan obat herbal di Klinik Ar-Ridlo" />
+          <div class="about__media" data-reveal>
+            <img src="img/obat.jpg" alt="Terapi dan obat herbal di Klinik Ar-Ridlo" loading="lazy" decoding="async" />
             <div class="about__experience">
               <strong>20+</strong>
               <span>Tahun Pendampingan</span>
             </div>
           </div>
 
-          <div class="about__content">
+          <div class="about__content" data-reveal="fade-left">
             <p class="eyebrow">Mengapa memilih kami</p>
             <h2>Fokus pada penyembuhan yang humanis dan terukur</h2>
             <p>Tim kami selalu memulai terapi dengan observasi menyeluruh, memadukan sains dan kearifan lokal. Anda mendapatkan pendampingan intensif sejak konsultasi pertama hingga pemulihan penuh.</p>
@@ -192,15 +197,15 @@
       <!-- ====== TEAM ====== -->
       <section id="team" class="team">
         <div class="container">
-          <div class="section-heading center">
+          <div class="section-heading center" data-reveal>
             <p class="eyebrow">Tim Medis</p>
             <h2>Profesional yang setia mendengar keluhan Anda</h2>
             <p>Setiap pasien ditemani dokter pilihan sesuai kebutuhan terapinya.</p>
           </div>
 
           <div class="team__grid">
-            <article class="team-card">
-              <img src="img/profile.png" alt="Faathir Akbar Nugroho" class="team-card__avatar" />
+            <article class="team-card" data-reveal>
+              <img src="img/profile.png" alt="Faathir Akbar Nugroho" class="team-card__avatar" loading="lazy" decoding="async" />
               <div class="team-card__body">
                 <div class="team-card__badge">Project Lead</div>
                 <h3>Faathir Akbar Nugroho</h3>
@@ -210,8 +215,8 @@
               </div>
             </article>
 
-            <article class="team-card">
-              <img src="img/profile.png" alt="Jati Rahmatulloh" class="team-card__avatar" />
+            <article class="team-card" data-reveal>
+              <img src="img/profile.png" alt="Jati Rahmatulloh" class="team-card__avatar" loading="lazy" decoding="async" />
               <div class="team-card__body">
                 <div class="team-card__badge">UI/UX</div>
                 <h3>Jati Rahmatulloh</h3>
@@ -221,8 +226,8 @@
               </div>
             </article>
 
-            <article class="team-card">
-              <img src="img/profile.png" alt="Dzaki Yushiibanaa" class="team-card__avatar" />
+            <article class="team-card" data-reveal>
+              <img src="img/profile.png" alt="Dzaki Yushiibanaa" class="team-card__avatar" loading="lazy" decoding="async" />
               <div class="team-card__body">
                 <div class="team-card__badge">Front-End</div>
                 <h3>Dzaki Yushiibanaa</h3>
@@ -232,8 +237,8 @@
               </div>
             </article>
 
-            <article class="team-card">
-              <img src="img/profile.png" alt="Daniel Daud Alberthus" class="team-card__avatar" />
+            <article class="team-card" data-reveal>
+              <img src="img/profile.png" alt="Daniel Daud Alberthus" class="team-card__avatar" loading="lazy" decoding="async" />
               <div class="team-card__body">
                 <div class="team-card__badge">Integrasi</div>
                 <h3>Daniel Daud Alberthus</h3>
@@ -243,8 +248,8 @@
               </div>
             </article>
 
-            <article class="team-card">
-              <img src="img/profile.png" alt="Bahrudin Yusuf" class="team-card__avatar" />
+            <article class="team-card" data-reveal>
+              <img src="img/profile.png" alt="Bahrudin Yusuf" class="team-card__avatar" loading="lazy" decoding="async" />
               <div class="team-card__body">
                 <div class="team-card__badge">QA & Support</div>
                 <h3>Bahrudin Yusuf</h3>
@@ -260,7 +265,7 @@
       <!-- ====== CONTACT ====== -->
       <section id="contact" class="contact">
         <div class="container contact__grid">
-          <div class="contact__content">
+          <div class="contact__content" data-reveal>
             <p class="eyebrow">Reservasi Mudah</p>
             <h2>Atur jadwal terapi Anda sekarang</h2>
             <p>Konsultan kami akan menghubungi kembali maksimal 15 menit setelah formulir terkirim.</p>
@@ -283,7 +288,7 @@
             </div>
           </div>
 
-          <form class="contact__form">
+          <form class="contact__form" data-reveal="fade-left">
             <label>
               Nama Lengkap
               <input type="text" placeholder="Cth. Rina Mulyani" required />
@@ -346,25 +351,37 @@
     </footer>
 
     <script>
-      // Navigation toggle
-      const nav = document.querySelector(".header__nav");
+      // === Navigation toggle ===
+      const headerEl = document.querySelector(".header");
       const toggle = document.querySelector(".header__toggle");
       const links = document.querySelectorAll(".header__menu a");
+      const overlay = document.querySelector(".header__overlay");
 
-      const toggleMenu = () => {
-        const isOpen = nav.classList.toggle("open");
-        toggle.setAttribute("aria-expanded", String(isOpen));
+      const setMenuState = (open) => {
+        if (!headerEl || !toggle) return;
+        headerEl.classList.toggle("is-menu-open", open);
+        document.body.classList.toggle("no-scroll", open);
+        toggle.setAttribute("aria-expanded", String(open));
       };
 
-      toggle.addEventListener("click", toggleMenu);
+      const toggleMenu = () => {
+        const willOpen = !headerEl.classList.contains("is-menu-open");
+        setMenuState(willOpen);
+      };
+
+      toggle?.addEventListener("click", toggleMenu);
+      overlay?.addEventListener("click", () => setMenuState(false));
       links.forEach((link) =>
         link.addEventListener("click", () => {
-          if (nav.classList.contains("open")) {
-            nav.classList.remove("open");
-            toggle.setAttribute("aria-expanded", "false");
-          }
+          if (headerEl.classList.contains("is-menu-open")) setMenuState(false);
         })
       );
+      window.addEventListener("resize", () => {
+        if (window.innerWidth > 960) setMenuState(false);
+      });
+      window.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") setMenuState(false);
+      });
 
       // Animated counters
       function animateCounters() {
@@ -391,6 +408,30 @@
       window.addEventListener("load", () => {
         setTimeout(animateCounters, 400);
       });
+
+      // === Reveal on scroll ===
+      const revealEls = document.querySelectorAll("[data-reveal]");
+      const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+      if (!prefersReducedMotion && "IntersectionObserver" in window) {
+        const revealObserver = new IntersectionObserver(
+          (entries, observer) => {
+            entries.forEach((entry) => {
+              if (!entry.isIntersecting) return;
+              entry.target.classList.add("is-visible");
+              observer.unobserve(entry.target);
+            });
+          },
+          { rootMargin: "0px 0px -10% 0px", threshold: 0.15 }
+        );
+
+        revealEls.forEach((el, index) => {
+          el.style.setProperty("--reveal-delay", `${(index % 6) * 70}ms`);
+          revealObserver.observe(el);
+        });
+      } else {
+        revealEls.forEach((el) => el.classList.add("is-visible"));
+      }
     </script>
   </body>
 </html>
